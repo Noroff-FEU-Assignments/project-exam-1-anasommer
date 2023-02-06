@@ -2,6 +2,7 @@
   --heading-font: "Bungee", cursive;
   --text-font: "Nunito", sans-serif;
   --post-link-font: "Poppins", sans-serif;
+  --link-color: #134563;
   --heading-color: hsla(203, 68%, 23%, 1);
   --text-color: #272142;
   --border-color: #e68022;
@@ -109,13 +110,13 @@ h1 {
 #load-more {
   display: block;
   margin: 20px;
+  color: var(--link-color);
 }
 
 /* Footer */
 footer {
   margin-top: 60px;
   background-color: var(--footer-color);
-  padding: 10px 0;
   border-top: var(--border-dashed);
 }
 
@@ -123,5 +124,4 @@ footer {
   width: 25px;
   height: 20px;
   margin: 15px;
-  cursor: pointer;
 }
