@@ -42,8 +42,49 @@ h1 {
   font-size: 28px;
 }
 
+.page-heading {
+  font-family: var(--heading-font);
+  color: #6d284d;
+}
+
+/* Navigation */
 .nav-menu {
-  display: none;
+  display: inline-block;
+  position: fixed;
+  left: -100%;
+  top: 5rem;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 1;
+  margin-top: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 0 auto 10px;
+  font-family: var(--text-font);
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.nav-item a {
+  color: var(--link-color);
+}
+
+.nav-item .active-link,
+.nav-item a:hover {
+  color: var(--post-link-color);
 }
 
 .bar {
@@ -55,9 +96,27 @@ h1 {
   background-color: var(--heading-color);
 }
 
-.page-heading {
-  font-family: var(--heading-font);
-  color: #6d284d;
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+/* hamburger icon transition to X */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+nav img {
+  width: 80%;
+  margin: 20px;
 }
 
 /* Latest posts section */
@@ -124,4 +183,7 @@ footer {
   width: 25px;
   height: 20px;
   margin: 15px;
+}
+
+@media (min-width: 680px) {
 }
