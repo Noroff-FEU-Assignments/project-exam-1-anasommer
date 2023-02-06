@@ -1,0 +1,17 @@
+body {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+h1 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+:root {
+  --heading-font: "Bungee", cursive;
+  --text-font: "Nunito", sans-serif;
+  --heading-color: #134563;
+  --text-color: #272142;
+  --border-color: #e68022;
+}
