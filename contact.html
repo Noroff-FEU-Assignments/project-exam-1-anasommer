@@ -24,7 +24,7 @@
             <a href="posts.html">Blog Posts</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" >About</a>
+            <a href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a href="contact.html" class="active-link">Contact</a>
@@ -40,17 +40,21 @@
     </header>
     <main>
       <h2 class="page-heading border-bottom">Contact</h2>
-      <section class="container about-me-section">
-       <form action="POST">
+      <section class="container">
+       <form>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name">
+        <span class="form-error name-error">Woops! Name should be at least 5 characters long</span>
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
+        <span class="form-error email-error">Please, enter valid email</span>
         <label for="subject">Subject:</label>
         <input type="text" name="subject" id="subject">
+        <span class="form-error subject-error">Subject should be at least 15 characters long</span>
         <label for="message">Your message:</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <button type="submit" class="send-btn">Send</button>
+        <span class="form-error message-error">Please, write at least 25 characters long message</span>
+        <button type="submit" id="send-btn">Send</button>
        </form>
     </main>
     <footer>
@@ -65,5 +69,6 @@
       /></a>
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
   </body>
 </html>
