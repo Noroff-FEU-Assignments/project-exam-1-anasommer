@@ -9,8 +9,10 @@ const subjectError = document.querySelector(".subject-error");
 const messageError = document.querySelector(".message-error");
 const sendBtn = document.querySelector("#send-btn");
 
-let formValid = false;
 let emailValid = false;
+let nameValid = false;
+let subjectValid = false;
+let messageValid = false;
 
 sendBtn.setAttribute("disabled", "disabled");
 
@@ -32,11 +34,22 @@ function validateEmail(email) {
 function checkValidation(input, minLength, errorSpan) {
   if (input.value.length < minLength) {
     errorSpan.style.display = "block";
-    formValid = false;
   } else {
     errorSpan.style.display = "none";
-    formValid = true;
+
+    switch (input) {
+      case name:
+        nameValid = true;
+        break;
+      case subject:
+        subjectValid = true;
+        break;
+      case message:
+        messageValid = true;
+        break;
+    }
   }
+  console.log(nameValid, messageValid, subjectValid, emailValid);
 }
 
 function validateForm() {
@@ -45,7 +58,7 @@ function validateForm() {
   checkValidation(message, messageMinLength, messageError);
   validateEmail(email);
 
-  if (formValid && emailValid) {
+  if (nameValid && subjectValid && messageValid && emailValid) {
     sendBtn.removeAttribute("disabled");
   }
 }
