@@ -49,7 +49,6 @@ function checkValidation(input, minLength, errorSpan) {
         break;
     }
   }
-  console.log(nameValid, messageValid, subjectValid, emailValid);
 }
 
 function validateForm() {
