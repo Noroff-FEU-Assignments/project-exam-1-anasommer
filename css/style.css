@@ -167,8 +167,8 @@ nav img {
   padding: 5px;
 }
 
-.separator-logo {
-  width: 130px;
+#separator-logo {
+  width: 110px;
   height: 30px;
 }
 
@@ -282,5 +282,23 @@ textarea {
   .about-me-text {
     margin-left: 50px;
     max-width: 425px;
+  }
+
+  .post-container {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: var(--border-dashed);
+  }
+
+  .post-image {
+    width: 400px;
+  }
+
+  .post-info {
+    margin-left: 50px;
+    max-width: 500px;
   }
 }
