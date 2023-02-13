@@ -413,4 +413,12 @@ textarea {
   #load-more {
     display: none;
   }
+
+  .spec-post-container {
+    max-width: 800px;
+  }
+
+  .spec-post-text {
+    max-width: 70%;
+  }
 }
