@@ -281,6 +281,33 @@ textarea {
   transition: all 0.2s;
 }
 
+/* Specific Post page */
+
+#spec-post-img {
+  margin-top: 30px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spec-post-heading {
+  margin: 40px auto;
+}
+
+.spec-post-container {
+  width: 80%;
+}
+
+.spec-post-text {
+  width: 90%;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.spec-post-separator {
+  margin-top: 30px;
+}
+
 /* Media Queries */
 
 @media (min-width: 800px) {
@@ -346,6 +373,10 @@ textarea {
   .post-info {
     margin-left: 50px;
     max-width: 500px;
+  }
+  #spec-post-img {
+    height: 300px;
+    max-width: 1100px;
   }
 }
 
