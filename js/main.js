@@ -54,7 +54,7 @@ function createHtml(postsArray) {
       const shortDesc = postsArray[i].excerpt.rendered.slice(3, -1);
 
       post = ` <div class="post">
-      <a href=""
+      <a href="/specificpost.html?id=${id}"
       ><img
         src="${image}"
         alt="Blog post image"
@@ -66,7 +66,7 @@ function createHtml(postsArray) {
     <p class="post-short-desc latest-short-desc">
       ${shortDesc}
     </p>
-    <a href="" class="post-link">Read more...</a>
+    <a href="/specificpost.html?id=${id}" class="post-link">Read more...</a>
     </div>`;
 
       slider.innerHTML += post;
