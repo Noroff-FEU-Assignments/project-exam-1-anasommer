@@ -530,10 +530,6 @@ textarea {
     display: inline-block;
   }
 
-  #load-more {
-    display: none;
-  }
-
   .spec-post-container {
     max-width: 800px;
   }
