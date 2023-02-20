@@ -23,12 +23,28 @@ async function showSpecificPost() {
   }
 }
 
+async function getPostImage(imgUrl) {
+  try {
+    const response = await fetch(imgUrl);
+    const data = await response.json();
+
+    const img = document.querySelector("#spec-post-img");
+
+    return (img.alt = data.alt_text);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function createHtml(post) {
   document.title = `Marathon blog | ${post.title.rendered}`;
-
+  const imgUrl = `https://anasommer.com/api/wp-json/wp/v2/media/${
+    Number(id) + 1
+  }`;
+  const imgAlt = getPostImage(imgUrl);
   postContainer.innerHTML = `<img
   src="${post.featured_media_src_url}"
-  alt="https://anasommer.com/api/wp-json/wp/v2/media/${id + 1}"
+  alt="${imgAlt}"
   id="spec-post-img"
   class="post-image"
 />
