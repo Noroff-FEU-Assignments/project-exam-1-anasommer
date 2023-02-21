@@ -5,7 +5,13 @@ const queryString = document.location.search;
 const parameter = new URLSearchParams(queryString);
 const id = parameter.get("id");
 
+// Post url
 const url = `https://anasommer.com/api/wp-json/wp/v2/posts/${id}`;
+
+// Image url
+const imgUrl = `https://anasommer.com/api/wp-json/wp/v2/media/${
+  Number(id) + 1
+}`;
 
 async function showSpecificPost() {
   try {
@@ -23,13 +29,11 @@ async function showSpecificPost() {
   }
 }
 
-async function getPostImage(imgUrl) {
+async function getPostImage() {
   try {
     const response = await fetch(imgUrl);
     const data = await response.json();
-
     const img = document.querySelector("#spec-post-img");
-
     return (img.alt = data.alt_text);
   } catch (error) {
     console.log(error);
@@ -39,10 +43,7 @@ async function getPostImage(imgUrl) {
 function createHtml(post) {
   document.title = `Marathon blog | ${post.title.rendered}`;
 
-  const imgUrl = `https://anasommer.com/api/wp-json/wp/v2/media/${
-    Number(id) + 1
-  }`;
-  const imgAlt = getPostImage(imgUrl);
+  const imgAlt = getPostImage();
   postContainer.innerHTML = `<img
   src="${post.featured_media_src_url}"
   alt="${imgAlt}"
