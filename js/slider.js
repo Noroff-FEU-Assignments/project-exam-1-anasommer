@@ -1,3 +1,7 @@
+// Start & End Slide index
+let startIndex = 0;
+let endIndex = 3;
+
 // Make a call to API to get list of posts
 
 async function renderPosts() {

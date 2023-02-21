@@ -6,10 +6,6 @@ const loader = document.querySelector(".loader-container");
 const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#previous");
 
-// Start & End Slide index
-let startIndex = 0;
-let endIndex = 3;
-
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
