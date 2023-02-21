@@ -17,7 +17,6 @@ async function showSpecificPost() {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    console.log(result);
     createHtml(result);
   } catch (error) {
     console.log(error);
