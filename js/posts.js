@@ -42,6 +42,7 @@ function createHtml(postsArray) {
     postsWrapper.innerHTML += post;
   }
 
+  // Load more post when link "Load more" has been clicked
   loadMorePostsLink.addEventListener("click", function (e) {
     e.preventDefault();
 
