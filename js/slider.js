@@ -3,7 +3,6 @@ let startIndex = 0;
 let endIndex = 3;
 
 // Make a call to API to get list of posts
-
 async function renderPosts() {
   // Get posts array
   try {
@@ -19,7 +18,7 @@ async function renderPosts() {
 
 function createHtml(postsArray) {
   loader.style.display = "none";
-
+  // Create slider
   function showPost(postsArray, startIndex, endIndex) {
     for (let i = startIndex; i < endIndex; i++) {
       const id = postsArray[i].id;
@@ -63,7 +62,7 @@ function createHtml(postsArray) {
     }
   });
 
-  // Next button
+  // Previous button
   prevBtn.addEventListener("click", function (e) {
     e.preventDefault();
     slider.innerHTML = ``;
