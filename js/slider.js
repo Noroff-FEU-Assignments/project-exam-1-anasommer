@@ -22,7 +22,6 @@ function createHtml(postsArray) {
   function showPost(postsArray, startIndex, endIndex) {
     for (let i = startIndex; i < endIndex; i++) {
       const id = postsArray[i].id;
-      console.log(id);
       const image = postsArray[i].featured_media_src_url;
       const title = postsArray[i].title.rendered;
       const shortDesc = postsArray[i].excerpt.rendered.slice(3, -1);
