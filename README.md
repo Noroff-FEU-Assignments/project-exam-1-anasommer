@@ -1,5 +1,7 @@
 ## Project Exam 1
 
+![Project exam 1 website](https://github.com/anasommer/portfolio/blob/main/img/exam-project.jpeg)
+
 ## Goal
 
 Semester project Course assignment project at NorOff School of Technology reflecting the student’s creative and technical knowledge and skills based on the first year curriculum. This includes design principles, project management, communication technology, developing with HTML/CSSm, Javascript, Wordpress and REST API.
